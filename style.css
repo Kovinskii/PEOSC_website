@@ -1,0 +1,118 @@
+/* https://www.youtube.com/watch?v=vRwa2wcJY0k - reference for blob animations */
+
+:root {
+    --prim: #f3f0ec;
+    --sec: #e2b692;
+    --ter: #324231;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/PEOSC_prototypeWebsiteDesignBACKGROUND.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+.display::before {
+    context: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 25% 30% rgba(168, 85, 247, 0.18), transparent 45%),
+            radial-gradient(circle at 75% 70%, rgba(6, 182, 212, 0.16, ), transparent 45%);
+    z-index: 0;
+}
+
+.blob {
+    position: absolute;
+    filter: blur(0px);
+    mix-blend-mode: screen;
+    will-change: border-radius, transform;
+    animation: 
+        morph 10s ease-in-out infinite,
+        float 14s ease-in-out infinite;
+    width: 20%;
+    height: 10%;
+}
+
+#blob-main {
+    width: 80%;
+    height: 90%;
+    background: var(--prim);
+
+    top: 25%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 9s 16s;
+}
+
+#blob-1 {
+    background: var(--prim);
+
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 9s 16s;
+}
+
+#blob-2 {
+    background: var(--prim);
+
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 11s 13s;
+    animation-delay: -3s, -5s;
+}
+
+#blob-3 {
+    background: var(--prim);
+
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 13s 18s;
+    animation-delay: -6s, -7s;
+}
+
+@keyframes morph {
+    0%, 
+    100% {border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;}   
+    25% {border-radius: 65% 35% 40% 60% / 55% 65% 35% 45%;}   
+    50% {border-radius: 35% 65% 55% 45% / 65% 40% 60% 35%;}   
+    75% {border-radius: 58% 42% 45% 55% / 40% 60% 35% 60%;}   
+}
+
+@keyframes float {
+    0%,
+    100% {transform: translate(-50%, -50%) rotate(0deg) scale(1.06);}
+    50% {transform: translate(-50%, -50%) rotate(8deg) scale(1.06);}
+}
