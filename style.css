@@ -1,7 +1,7 @@
 /* https://www.youtube.com/watch?v=vRwa2wcJY0k - reference for blob animations */
 
 :root {
-    --prim: #f3f0ec;
+    --prim: #e7d4c2;
     --sec: #e2b692;
     --ter: #324231;
 
@@ -37,7 +37,6 @@ html, body {
 }
 
 .display::before {
-    context: '';
     position: absolute;
     inset: 0;
     background:
@@ -55,8 +54,9 @@ html, body {
     animation: 
         morph 10s ease-in-out infinite,
         float 14s ease-in-out infinite;
-    width: 20%;
-    height: 10%;
+
+    width: 25%;
+    height: 15%;
 }
 
 #blob-main {
@@ -74,8 +74,8 @@ html, body {
 #blob-1 {
     background: var(--prim);
 
-    top: 50%;
-    left: 38%;
+    top: 60%;
+    left: 12%;
     transform: translate(-50%, -50%);
     opacity: 0.55;
     animation-duration: 9s 16s;
@@ -84,31 +84,42 @@ html, body {
 #blob-2 {
     background: var(--prim);
 
-    top: 50%;
-    left: 62%;
-    transform: translate(-50%, -50%);
-    opacity: 0.55;
-    animation-duration: 11s 13s;
-    animation-delay: -3s, -5s;
-}
-
-#blob-3 {
-    background: var(--prim);
-
-    top: 30%;
-    left: 50%;
+    top: 77%;
+    left: 23%;
     transform: translate(-50%, -50%);
     opacity: 0.55;
     animation-duration: 13s 18s;
     animation-delay: -6s, -7s;
 }
 
+#blob-3 {
+    background: var(--prim);
+
+    top: 83%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 9s 16s;
+    animation-delay: -6s, -7s;
+}
+
+#blob-4 {
+    background: var(--prim);
+
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.55;
+    animation-duration: 9s 16s;
+    animation-delay: -3s, -5s;
+}
+
 @keyframes morph {
     0%, 
     100% {border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;}   
-    25% {border-radius: 65% 35% 40% 60% / 55% 65% 35% 45%;}   
+    25% {border-radius: 65% 35% 40% 60% / 55% 65% 35% 45%; background: #fff;}   
     50% {border-radius: 35% 65% 55% 45% / 65% 40% 60% 35%;}   
-    75% {border-radius: 58% 42% 45% 55% / 40% 60% 35% 60%;}   
+    75% {border-radius: 58% 42% 45% 55% / 40% 60% 35% 60%; background: #fff;}   
 }
 
 @keyframes float {
