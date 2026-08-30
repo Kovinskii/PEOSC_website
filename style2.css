@@ -17,7 +17,6 @@
     box-sizing: border-box;
 
     color: var(--text);
-    text-shadow: 2px 2px 4px var(--ter);
     font-family: "Century Gothic", "Arial Bold", Gadget, sans-serif;
     font-weight: 900;
     -webkit-text-stroke: 2px #3c643c;
@@ -29,6 +28,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+
+    display: flex;
+    margin: 10px;
 }
 
 html, body {
@@ -44,6 +46,7 @@ html, body {
 
 button {
     border: none;
+    text-shadow: 2px 2px 4px var(--ter);
 }
 
 h1 {
@@ -63,6 +66,8 @@ h1 {
     justify-content: center;
     align-items: center;
     isolation: isolate;
+
+    text-shadow: 3px 2px 4px var(--ter);
 }
 
 
@@ -96,13 +101,6 @@ h1 {
     opacity: 1;
 }
 
-#background-1 {
-    position: absolute;
-    z-index: -1;
-    background: #542b1059;
-    width: 100%;
-    height: 100%;
-}
 
 #blob-main {
     width: 55%;
@@ -158,22 +156,61 @@ h1 {
 
 .sch {
     position: absolute;
-    filter: blur(0px);
-    mix-blend-mode: screen;
-
-    width: 20%;
-    height: 12%;
-
-    font-size: 200%;
-    opacity: 0.5;
 
     border: solid;
     border-color: var(--prim);
     border-radius: 5px;
 
     box-shadow: 0px 0px 5px 2px #ffefd683;
-    background: var(--prim);
+    text-shadow: 0px 0px 4px var(--prim);
+    
+    background: var(--prim2);
 
     min-width: 40px; 
     min-height: 40px;
+}
+
+.lines {
+    margin: 3px;
+    border: 1px solid var(--prim);
+    border-radius: 5px;
+}
+
+
+#times {
+    top: 15px;
+    left: 15px;
+
+    padding: 5px;
+    
+    width: 80px;
+    height: fit-content;
+    text-align: center;
+
+    font-size: 20px;
+}
+
+#small-times {
+    padding: 5px;
+    
+    width: 80px;
+    height: fit-content;
+    text-align: center;
+
+    font-size: 20px;
+}
+
+
+#dates {
+    top: 15px;
+    left: 115px;
+
+    width: 85%;
+    background: var(--prim3);
+
+    height: fit-content;
+}
+
+.day-1{
+    
 }
