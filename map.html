@@ -9,8 +9,20 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    <div id="map-holder">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9713537963507!2d-79.50444332493387!3d43.77345347109668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cd330b767bfb%3A0xdbb899cc9da76d19!2sYork%20University!5e0!3m2!1sen!2sca!4v1788108617517!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div id="big-holder">
+        <div class="block" id="png-map">
+            <img src="images/YorkMap.jpg" alt="e" id="york-map">
+        </div>
+
+        <div class="block" id="map-holder">
+            <h1> Interactive Map </h1>
+            <iframe id="int-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9713537963507!2d-79.50444332493387!3d43.77345347109668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cd330b767bfb%3A0xdbb899cc9da76d19!2sYork%20University!5e0!3m2!1sen!2sca!4v1788108617517!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+            <div id="map-selector">
+                <button onclick="document.getElementById('int-map').src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0301548405314!2d-79.50926372493396!3d43.7722328710967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2f83ec72aef9%3A0x5fc298e10a6b0d11!2sBergeron%20Centre%20for%20Engineering%20Excellence!5e0!3m2!1sen!2sca!4v1788120105148!5m2!1sen!2sca" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin'"> YorkU </button>
+                <button value=""> York University (General) </option>
+            </div>
+        </div>
     </div>
 </body>
 </html>
